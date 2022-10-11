@@ -1,0 +1,32 @@
+p{
+    color: black;
+    background-color: #ffffff00;
+    font-size: 30px;
+    font-weight: bolder;
+    font-variant:normal;
+    font-style: italic;  
+  }
+  .sepspan{
+    font-family:Bungee;
+  }
+  #one{
+    font-family: Nabla;
+    
+  }
+  #two{
+    font-family: 'Roboto Mono';
+  }
+  #three{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  span{
+    font-family: 'Rubik Moonrocks';
+  }
+  body
+  {
+    background-image: url("https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 20%;
+  }

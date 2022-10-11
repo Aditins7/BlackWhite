@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work Sans">
+    <link rel="stylesheet" href="style.css">
+    <link rel = "icon" href = "logo (1).svg" type = "image/x-icon">
+    <title>BlackWhite</title>
+    <style>
+           .property {
+        width: 900px;
+        margin: auto;
+      }
+      .slideshow {
+        background: #262626;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        margin-top: 30px;
+        position: relative;
+      }
+      .slideshow-item {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+      }
+      .slideshow-item img {
+        width: 100%;
+        display: block;
+        margin: auto;
+      }
+      .arrow {
+        position: absolute;
+        top: 0;
+        display: block;
+        width: 50px;
+        height: 100%;
+        background: url("data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%206%2016%22%20width%3D%226%22%20height%3D%2216%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m5%201-4%207%204%207%22%20fill%3D%22none%22%20stroke-width%3D%22.8%22%20opacity%3D%22.3%22%20stroke%3D%22%23000%22%20stroke-linecap%3D%22square%22%2F%3E%3Cpath%20d%3D%22m5%201-4%207%204%207%22%20fill%3D%22none%22%20stroke-width%3D%22.5%22%20stroke%3D%22%23fff%22%20stroke-linecap%3D%22square%22%2F%3E%3C%2Fsvg%3E%0A") no-repeat center/30px;
+      }
+      .arrow-next {
+        right: 0;
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+      }
+      .progress {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        color: #ccc;
+        font-family: sans-serif;
+      }
+      
+[id^="target"]:target ~ .play {
+  -webkit-transition: all 750ms ease;
+  transition: all 750ms ease;
+  opacity: 1;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+ 
+[id^="target"] {
+  display: none;
+}
+.item-1 {
+  z-index: 2;
+  opacity: 1;
+}
+ 
+*:target ~ .item-1 {
+  opacity: 0;
+}
+ 
+#target-1:target ~ .item-1 {
+  opacity: 1;
+}
+ 
+#target-2:target ~ .item-2,
+#target-3:target ~ .item-3,
+#target-4:target ~ .item-4 {
+  z-index: 3;
+  opacity: 1;
+}
+@-webkit-keyframes slideshow {
+  0%, 30%, 100% {
+    opacity: 0;
+  }
+  5%, 25% {
+    opacity: 1;
+  }
+}
+ 
+@keyframes slideshow {
+  0%, 30%, 100% {
+    opacity: 0;
+  }
+  5%, 25% {
+    opacity: 1;
+  }
+}
+html, body{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+img{
+  margin: 5px;
+}
+hr{
+  height: 2px;
+  background-color: black;
+}
+h2{
+  font-size: 30px;
+  color: #004080;
+  font-family:'Work Sans' ;
+  font-weight:bolder;
+  text-align: center;
+}
+h3{
+  color: #004080;
+  font-family: 'Work Sans';
+  font-size: 25px;
+}
+ul{
+  list-style-type: none;
+  font-family:'Work Sans';
+  font-weight: bold;
+  color: #004080;
+}
+h1{
+  font-family: 'Work Sans';
+  font-size: 40px;
+  color: #004080;
+  text-align: center;
+}
+a:link{
+  color: #004080;
+  background-color: transparent;
+  text-decoration: none;
+}
+#bw_about{
+  color: #004080;
+  font-family: 'Work Sans';
+  font-size: 30px;
+  text-align: center;
+}
+#top{
+  color: #004080;
+  font-family: 'Work Sans';
+  font-size: 30px;
+  text-align: center;
+}
+td a{
+  color: #004080;
+  font-family: 'Work Sans';
+  font-size: 20px;
+}
+#contact{
+  color: #004080;
+  font-family: 'Work Sans';
+  font-size: 30px;
+}
+#mail1{
+  color: #004080;
+  font-family: 'Work Sans';
+  font-size: 25px;
+  text-align: center;
+  font-weight:bolder;
+}
+a:visited {
+  color: #004080;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: azure;
+  background-color: transparent;
+  text-decoration: underline;
+}
+body{
+  background-image:url(cool-background.png);
+  background-attachment: scroll;
+}
+table{
+  text-align: center;
+  table-layout: fixed ;
+  width: 100% ;
+}
+td a img{
+  padding: 0px;
+  border-radius: 200px;
+}
+#bw_about, #top{
+  color: #004080;
+  font-family:'Work Sans' ;
+  font-weight:bolder;
+}
+#hm{
+  width:50px;float:right" 
+}
+#copy{
+  font-size: 15px;
+  color:#404040;
+  text-align: center;
+  font-family:'Work Sans' ;
+  font-weight:bolder;
+}
+.parent {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.search_bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media all and (max-width: 450px){
+  .search_bar{
+    width: 100%;
+  }
+}
+
+.search_icn {
+  position: absolute;
+  left: 450px;
+  top: 20px;
+}
+.dropbtn {
+  background-color: transparent;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position:fixed;
+  right: 10px;
+  background-color: #f1f1f1;
+  min-width: 80px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: 'Work Sans';
+}
+
+.dropdown-content a:hover {background-color:transparent;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: transparent;}
+
+#drop-1{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+#dropdown-1 {
+  float: left;
+}
+
+#dropdown-1 a, .dropbtn-1 {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+#dropdown-1 a:hover, .dropdown-1:hover .dropbtn-1 {
+  background-color: aquamarine;
+}
+
+li.dropdown-1 {
+  display: inline-block;
+}
+
+.dropdown-content-1 {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content-1 a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content-1 a:hover {background-color: #004080;}
+
+.dropdown-1:hover .dropdown-content-1 {
+  display: block;
+}
+
+#drop-1 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+#dropdown-2 {
+  float: left;
+}
+
+#dropdown-2 a, .dropbtn-2 {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+#dropdown-2 a:hover, .dropdown-2:hover .dropbtn-2 {
+  background-color: aquamarine;
+}
+
+li.dropdown-2 {
+  display: inline-block;
+}
+
+.dropdown-content-2 {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content-2 a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content-2 a:hover {background-color: #004080;}
+
+.dropdown-2:hover .dropdown-content-2 {
+  display: block;
+}
+
+#drop-1{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+#dropdown-3 {
+  float: left;
+}
+
+#dropdown-3 a, .dropbtn-3 {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+#dropdown-3 a:hover, .dropdown-3:hover .dropbtn-3 {
+  background-color: aquamarine;
+}
+
+li.dropdown-3 {
+  display: inline-block;
+}
+
+.dropdown-content-3 {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content-3 a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content-3 a:hover {background-color: #004080;}
+
+.dropdown-3:hover .dropdown-content-3 {
+  display: block;
+}
+#drop-1{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+#dropdown-4 {
+  float: left;
+}
+
+#dropdown-4 a, .dropbtn-4 {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+#dropdown-4 a:hover, .dropdown-4:hover .dropbtn-4 {
+  background-color: aquamarine;
+}
+
+li.dropdown-4 {
+  display: inline-block;
+}
+
+.dropdown-content-4 {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content-4 a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  z-index: 1;
+}
+
+.dropdown-content-4 a:hover {background-color: #004080;}
+
+.dropdown-4:hover .dropdown-content-4 {
+  display: block;
+}
+#drop-1{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+#dropdown-5 {
+  float: left;
+}
+
+#dropdown-5 a, .dropbtn-5 {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+#dropdown-5 a:hover, .dropdown-5:hover .dropbtn-5 {
+  background-color: aquamarine;
+}
+
+li.dropdown-5 {
+  display: inline-block;
+}
+
+.dropdown-content-5 {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content-5 a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content-5 a:hover {background-color: #004080;}
+
+.dropdown-5:hover .dropdown-content-5 {
+  display: block;
+}
+    </style>
+</head>
+<body>
+  <div style="float:left;width:fit-content">
+    <img id="logo" src="BW_logo.png" style="width: 200px;">
+  </div>
+  <div id="ele" style="float:right;width:fit-content">
+      <img src="love.png" style="width: 40px;">
+      <img src="shopping-cart.png" style="width:40px ;">
+      <div class="dropdown">
+        <button class="dropbtn"><img class="usr" src="user.png" style="width: 40px;z-index: -1;"></button>
+        <div class="dropdown-content">
+          <a href="#">Profile</a>
+          <a href="#">Orders</a>
+          <a href="#">More about us</a>
+        </div>
+      </div>
+  </div>
+  
+  <div class="parent">
+    <form class="search_bar" style="position: relative;left: 5%;">
+      <input type="text" placeholder="Search" style="width: 50%; height: 40px; margin-top: 10px;text-indent: 20px;">
+    </form>
+  </div>
+  <br>
+  <br>
+    <hr>
+    <ul id="drop-1">
+      <li class="dropdown-1">
+        <a href="#elec" class="dropbtn-1">Electronics</a>
+        <div class="dropdown-content-1">
+          <a href="#">Mobiles</a>
+          <a href="#">Laptops</a>
+          <a href="#">Tablets</a>
+        </div>
+      </li>
+      <li class="dropdown-2">
+        <a href="#fash" class="dropbtn-2">Fashion</a>
+        <div class="dropdown-content-2">
+          <a href="#">Men</a>
+          <a href="#">Women</a>
+        </div>
+      </li>
+      <li class="dropdown-3">
+        <a href="#home" class="dropbtn-3">Home decor</a>
+        <div class="dropdown-content-3">
+          <a href="#">Furnitures</a>
+          <a href="#">Wall hangings</a>
+          <a href="#">Antiques</a>
+        </div>
+      </li>
+      <li class="dropdown-4">
+        <a href="#ref" class="dropbtn-4">Refurbished products</a>
+        <div class="dropdown-content-4">
+          <a href="#">Under 1000</a>
+          <a href="#">Under 2000</a>
+        </div>
+      </li>
+      <li class="dropdown-5">
+        <a href="#groc" class="dropbtn-5">Grocery</a>
+        <div class="dropdown-content-5">
+          <a href="#">Fruits</a>
+          <a href="#">Veggies</a>
+          <a href="#">Necessities</a>
+        </div>
+      </li>
+    </ul>
+    <hr>
+    <br><br>
+    <h2>Top Deals on Your Favourite Brand!</h2> 
+    <div class="property" id="highlight">
+      <section class="slideshow" style="height: 420px;">
+         <span id="target-1"></span>
+         <span id="target-2"></span>
+         <span id="target-3"></span>
+         <span id="target-4"></span>
+         <a href="#" class="play">play</a>
+         <div class="slideshow-item item-1">
+            <div class="progress">1 of 4</div>
+            <a href="https://www.flipkart.com/offers-store?otracker=nmenu_offer-zone&fm=neo%2Fmerchandising&iid=M_e9ffb7d5-8003-4e7e-b9b6-2f62f025c513_1_372UD5BXDFYS_MC.G6ZC4RAJ9OHU&otracker=hp_rich_navigation_1_1.navigationCard.RICH_NAVIGATION_Top%2BOffers_G6ZC4RAJ9OHU&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_1_L0_view-all&cid=G6ZC4RAJ9OHU"><img src="https://storiesflistgv2.blob.core.windows.net/stories/2020/10/BBDNewsUpdate_FKS_v1.jpg" alt="" /></a>
+            <a href="#target-4" class="arrow arrow-prev"></a>
+            <a href="#target-2" class="arrow arrow-next"></a>
+         </div>
+         <div class="slideshow-item item-2">
+            <div class="progress">2 of 4</div>
+            <a href="https://www.amazon.in/?&ext_vrnc=hi&tag=googhydrabk1-21&ref=pd_sl_4d1ohbptwj_e&adgrpid=58490306106&hvpone=&hvptwo=&hvadid=486391490878&hvpos=&hvnetw=g&hvrand=3290184637291958330&hvqmt=e&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1007773&hvtargid=kwd-298187295805&hydadcr=5657_2175734&gclid=CjwKCAjwsfuYBhAZEiwA5a6CDN57KHjxYtq6NLsEzTakM3t9q09jqq2PRQBwKLiVzcTIiTak7XZmDxoCJK0QAvD_BwE"><img src="https://images.indianexpress.com/2021/09/Amazon_Festival_2021.jpg" alt="" /></a>
+            <a href="#target-1" class="arrow arrow-prev"></a>
+            <a href="#target-3" class="arrow arrow-next"></a>
+         </div>
+         <div class="slideshow-item item-3">
+            <div class="progress">3 of 4</div>
+            <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjel8SBmY_6AhVDn8IKHSvsAkMYABAAGgJ0bQ&ohost=www.google.com&cid=CAESauD2A-X8uC8qszbLYiR_qno5cyHhv0J2Kgb7heD_oydHIeoQkJdMLyKf6gkVjSQyJPy5hxMj9dwawbN9c-_RRlocM78V5qrgsc7sbaX_jLxp3oPIKxVuQEjvsfLtM626cBrgYkcg2787-i8&sig=AOD64_1BXZbqxTLDOt7DWYbe9d6_cbZG4Q&q&adurl&ved=2ahUKEwiA07yBmY_6AhWIAN4KHXSIANMQ0Qx6BAgDEAE"><img src="https://couponswala.com/blog/wp-content/uploads/2021/12/myntra-upcomming-sale-min-1.png"></a>
+            <a href="#target-2" class="arrow arrow-prev"></a>
+            <a href="#target-4" class="arrow arrow-next"></a>
+         </div>
+         <div class="slideshow-item item-4">
+            <div class="progress">4 of 4</div>
+            <a href="https://www.ajio.com/?gclid=CjwKCAjwsfuYBhAZEiwA5a6CDHcfGOXGprhiJo2h5MkcC8Kny68ymoASoHOoW9nlXkWMtWYtEHwA3xoCXToQAvD_BwE"><img src="https://cdn0.desidime.com/cdn-cgi/image/fit=contain,f=auto,onerror=redirect,w=640,h=360,q=90/attachments/photos/715308/original/ajioBBS.png"></a>
+            <a href="#target-3" class="arrow arrow-prev"></a>
+            <a href="#target-1" class="arrow arrow-next"></a>
+         </div>
+      </section>
+   </div>
+   <br><br><br><br><br>
+   <hr>
+   <table>
+    <tr>
+    <td>
+        <h3>Top offers</h3>
+        <a href="offers.html"><img src="offers.jpg" style="width: 90%;"></a>
+    </td>
+    <td>
+        <h3>Electronics</h3>
+        <a href="electronics.html"><img src="electronic.jpg" style="width: 90%;"></a>
+    </td>
+    <td>
+      <h3>Fashion</h3>
+      <a href="fashion.html"><img src="fashion.jpg" style="width: 90%;"></a>
+    </td>
+    <tr>
+    <td>
+        <h3>Groceries</h3>
+        <a href="grocery.html"><img src="grocery.jpg" style="width: 90%;"></a>
+    </td>
+    <td>
+        <h3>Home Decor</h3>
+        <a href="home.html"><img src="home.jpg" style="width: 90%;"></a>
+     </div>
+    </td>
+    <td>
+        <h3>Refurbished Products</h3>
+        <a href="sec_hand.html"><img src="https://images.pexels.com/photos/4700388/pexels-photo-4700388.jpeg" style="width: 90%;"></a>
+    </td>
+    </tr>
+    </table>
+    <hr>
+    <h1>About Us</h1>
+    <p id="bw_about"><b>BlackWhite corp.</b></p>
+    <p id="top">Top contributors</p>
+    <table>
+    <tr>
+      <td>
+        <ul>
+        <a href="https://www.flipkart.com/"><li>Flipkart</li></a>
+        <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwip0L2_xZv6AhWlg0sFHdKoDcYYABAAGgJzZg&ohost=www.google.com&cid=CAESauD2u8Q0dqo400bMsn-tXxObtRUV0zjGRV72zd0oH8xLZc37cF7j6pP6ltbSU8yIBv4iXwZQXvWU5YDy-GElV0v9XxpF5GZpHgf2BIOCMydqm64hJ02pTsuYORyMcyjKvXlXhJM9THsUTFI&sig=AOD64_1dH4X7lMVqbL4qIrN_OvdR2sEzSg&q&adurl&ved=2ahUKEwjg2bW_xZv6AhXD3HMBHazfDL4Q0Qx6BAgEEAE" target="_self"><li>Myntra</li></a>
+        <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjSgObnxZv6AhVHDysKHWggCM8YABAAGgJzZg&ohost=www.google.com&cid=CAESauD2_Cd9CezJAkprWr-1c3IAkDu2hdJ-Ur2nAEqxXQ-d3gFaBwIPIU611AessJmgSWzJyFgB8QEQ3xOMz19jw67K0LDaKXPkCFg7uwCmV3oXrIJEUxDbQiwj8dHOtZRlo-bWLtieCNCJBAo&sig=AOD64_0xvAXsy5r0T2DV7_nr8JdXcAfGQw&q&adurl&ved=2ahUKEwj46N7nxZv6AhW8UWwGHfPkDEwQ0Qx6BAgEEAE"><li>Bigbasket</li></a>
+        <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwi58szxxZv6AhWYHSsKHa3rBrQYABADGgJzZg&ohost=www.google.com&cid=CAESauD2i86HUB0r_K93126v2umnhBP0CofItB_efmwo8T5PSaiFxtzjlORiI9-Uzq22mTwrSqSxe9k4R0hgPqZZ7P7lmbCNrgsdJEzCFB2dewUyXraBO5d_bqExNKmo1qAL-MbAi3bZW80JHMA&sig=AOD64_0lik3tgEFDdoz-tTmSvyFbal7_NA&q&adurl&ved=2ahUKEwij1sTxxZv6AhX6cGwGHWTnBCUQ0Qx6BAgFEAE"><li>PepperFry</li></a>
+        <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjL5af6xZv6AhUUCSsKHSJnBfEYABAAGgJzZg&ohost=www.google.com&cid=CAESauD2CiJOmUtYDf3cJrLOjFW83dhzVCZm8tqAOod06aJolb1C2o8xAm_ZVYR4gHam0ZQ9tDychlJXuKQoFDThXh8XpvvTgy6ph8eHvkA_cwnMyz0SJtglOSt1Uc_2xzYB7J6C--TLAlPZb8Y&sig=AOD64_0gd_Fz8Jviit_2cqV_jlKcprrtAQ&q&adurl&ved=2ahUKEwi8gp76xZv6AhXrSWwGHY8bB24Q0Qx6BAgEEAE" target="_self"><li>Amazon</li></a>
+        <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjkubiCxpv6AhUVmmYCHamkDI4YABACGgJzbQ&ohost=www.google.com&cid=CAESauD2S0uAIegU01z7FCWms8ULrrvMUhkncr5eoTPMj1QlriJQYW8OxItWVb5V_euivN61xM2bw3Bfi2FiIyAXjmezynWwp9BnI-uacUHE9lh18GVCQlsdLxQ-IvtO3dU23RV5dkbXraRvDDc&sig=AOD64_36uDM4O_hEo3-jiIfqavIuYJFUQw&q&adurl&ved=2ahUKEwiy966Cxpv6AhVLZWwGHWpKDDIQ0Qx6BAgFEAE"><li>Croma</li></a>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjyr4Shxpv6AhWBRysKHWQMBeEYABABGgJzZg&ohost=www.google.com&cid=CAESauD25MA7wPnRBoOPbdPBvo7d_H8FMCKnOuj9JM0kH1OeQwLMSxb4sfYt6SnodP8vuxyMbfwAABZSJoXdPN5DOEq9EUUCwBhtASRjEsetQhex8Nm9j3xbXeY48aSyZJQWWyflzqekuFCcPGI&sig=AOD64_1J7MvEsKvRmVWlrajZ6tvGRVXnPA&q&adurl&ved=2ahUKEwiXn_ygxpv6AhULSGwGHdxdAswQ0Qx6BAgFEAE"><li>Snapdeal</li></a>
+          <a href="https://www.indiamart.com/"><li>IndiaMart</li></a>
+          <a href="https://in.bookmyshow.com/"><li>Book my Show</li></a>
+          <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjOsJO7xpv6AhVHHSsKHYX9BysYABAAGgJzZg&ohost=www.google.com&cid=CAESauD2ZYZ3vMoTrJ5EbXbkb9_l_5iKKF5EFghrGwlVrtzaEIwE-sKU18dXRwVvsYedWo2gDZiqTeImUmLjtCkZ8wTa1L8LMtPGRNwGXJUn2l4xmhC0OlgIJ9r8YwquzhwmiQE4nBUPZjoH5RY&sig=AOD64_0ou3KBwJ3X2dM5G7KLq5VcFOHNxg&q&adurl&ved=2ahUKEwj-84u7xpv6AhUqT2wGHTJIBN8Q0Qx6BAgEEAE"><li>Nykaa</li></a>
+          <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwiQ0e7Bxpv6AhXLESsKHdzDDsQYABAAGgJzZg&ohost=www.google.com&cid=CAESauD2jk83GnAonuJHc469N7xmpW9mGUnNL2YOUpl2wDBKcaVnaulHwAgiAvdKbg3ZMWAMuwQqn4WS_wx0S_WlzAfdHvh7O_u_425r0-Nd40evTs7UypeSRk3pg2kNGezBWGItkGjxCM7JNvk&sig=AOD64_3jSMaMpq0NHleqrfkv7qCyNAkHBg&q&adurl&ved=2ahUKEwjJuOfBxpv6AhUTcGwGHadLCJUQ0Qx6BAgEEAE"><li>Alibaba</li></a>
+          <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjunqnJxpv6AhVSmGYCHTvUDeIYABAAGgJzbQ&ohost=www.google.com&cid=CAESauD2NWn3eDYGqRDAQcQvoi8eedpBJYB3DEdmz2GNwvwFd9QxxNZkl3cT0oakduSEkwkgjmT_UKFT3wbWkVYyGKp2qtD9VrpOe3G1o9SfssTJSHYxL9v7FSrqlpJp2qhJ7srL8wFBVcF4nz0&sig=AOD64_16KUFRX1Z3Omj8T0rkUEp9TZ1NzQ&q&adurl&ved=2ahUKEwiwqKLJxpv6AhW8RmwGHdjYA08Q0Qx6BAgEEAE"><li>First Cry</li></a>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjeosnpxpv6AhX4gksFHTOFD6cYABAAGgJzZg&ohost=www.google.com&cid=CAESauD2FocMsKe2nHMYYLzpmy48OEv5N4IZieSJZAHOjvhCR2QffaU9usnAXwFfh0SVLDis3g3nQgs-h4gDGEAAxJiDEy-gKBw1QVVfjEZySOHurhxapHxeD7eg-qDah2klKwC7bHMUm__sYek&sig=AOD64_1dMlpHYgzkyfVaWMSaRms_7StK8Q&q&adurl&ved=2ahUKEwjl5sHpxpv6AhU0T2wGHXhCBnAQ0Qx6BAgEEAE"><li>1mg</li></a>
+          <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwiOquHwxpv6AhWPAHIKHYcyBUkYABAAGgJzZg&ohost=www.google.com&cid=CAESauD292Jr3vnaGw18tGNmtpju4nbHOOa_psTl-fqIU-8E09z5MSu6hoR6IZQwhD7mqcS3ZVNITIgQQA8uWtwOKDlTOlyZzfwqd9XMpE8hyCV_jMv8Ue9fA2j97ANyr32f_u0FOYrIoPk-nj0&sig=AOD64_1WMcphW3uQALfQPfyWABQH8vk99w&q&adurl&ved=2ahUKEwiqldrwxpv6AhXCT2wGHcdPBYgQ0Qx6BAgEEAE"><li>Pharmeasy</li></a>
+          <a href="https://www.makemytrip.com/"><li>Make my trip</li></a>
+          <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjd2J6Hx5v6AhWlk2YCHTh6CucYABAAGgJzbQ&ohost=www.google.com&cid=CAESauD2Gp0bU3q76QPuh4Pj3sYIOy0Vt4mOq9MyHkbMoS7qcDyryQA1rie8rsh1k4AM_orJgOBc8IqisZkq0VyWMchBJhxFuO4C9Tir4j9uZ3jPNRZvl6rAH2T5EDb5kbRXSu-x8blPvBm-cbo&sig=AOD64_1w44o2Xtul3QBDr6dsd6fnXS_Jag&q&adurl&ved=2ahUKEwi5uZiHx5v6AhUhUGwGHeLxBWwQ0Qx6BAgEEAE"><li>Limeroad</li></a>
+          <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjVg8ihx5v6AhXtmWYCHYVKAosYABAAGgJzbQ&ohost=www.google.com&cid=CAESauD2TeFT6hr0iQUXZJwsNpOVAlOjcURJ9fiwd7ct5RcnHykI79QYCFRXBY7t-G5hSL13qIszUjS0PeDVYEc7u0VxHP3QmjTJZ-Hb8y-ELqgmOsOgXMX9DkAtL5wj3L032x1Ue-3QuKPEdy4&sig=AOD64_0PKy2IlRHHFekRQYrBJzhVcKcOgA&q&adurl&ved=2ahUKEwiB0cGhx5v6AhUXSWwGHXeuA3AQ0Qx6BAgDEAE"><li>AJIO</li></a>
+        </ul>
+      </td>
+    </tr>
+    </table>
+    <hr>
+    <br>
+    <a href="https://github.com/Aditins7/BlackWhite" style="text-decoration: none;"><p id="mail1">Aditins7(GitHub)</p></a>
+    <p id="mail1" style="font-size: 18px;">Aditi</p>
+    <p id="copy">Copyrights 2022. All Rights Reserved</p>
+</body>
+</html>
